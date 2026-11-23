@@ -46,9 +46,10 @@
 
 ### Install
 
+From the Jarvis World checkout:
+
 ```bash
-git clone https://github.com/avaturn-live/avtr-1.git
-cd avtr-1
+cd live_avatar
 pixi install
 ```
 

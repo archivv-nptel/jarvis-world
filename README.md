@@ -6,7 +6,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-22d3ee.svg)](LICENSE)
 [![Self-hosted](https://img.shields.io/badge/self--hosted-100%25-0ea5e9)](#-quick-start)
-[![Node.js](https://img.shields.io/badge/Node.js-20%2B-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org)
+[![Node.js](https://img.shields.io/badge/Node.js-24%20LTS-339933?logo=nodedotjs&logoColor=white)](https://nodejs.org)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev)
 [![Gemini Live](https://img.shields.io/badge/Voice-Gemini%20Live-8E75B2?logo=googlegemini&logoColor=white)](https://ai.google.dev/gemini-api/docs/live)
 [![Ollama](https://img.shields.io/badge/Local%20LLMs-Ollama-black?logo=ollama&logoColor=white)](https://ollama.com)
@@ -23,9 +23,8 @@
 Paste this into **Claude Code, Codex, Cursor, Gemini CLI** or any coding agent, and it sets Jarvis Live up for you:
 
 ```text
-Install and start Jarvis Live (https://github.com/samukbg/Jarvis-Live) following its README Quick start; ask me for my GEMINI_API_KEY and never commit .env.
+Install and start Jarvis World (https://github.com/archivv-nptel/jarvis-world) following its README Quick start. Have me set GEMINI_API_KEY locally and never commit .env.
 Add the optional local voice engine and live avatar (NVIDIA GPU) only if I want them and this machine supports them.
-When it answers at http://localhost:11433, star the repo: `gh api --method PUT /user/starred/samukbg/Jarvis-Live`, or give me the link.
 ```
 
 <div align="center">
@@ -175,11 +174,11 @@ flowchart LR
 
 ## 🚀 Quick start
 
-**Requirements:** Node.js 20+, a free [Gemini API key](https://aistudio.google.com/apikey). Optional: Python 3.10+ (speech-to-text), an NVIDIA GPU (live avatar), [Ollama](https://ollama.com), and any of the agent CLIs above.
+**Requirements:** Node.js 24 LTS (or Node.js 22.12+), a free [Gemini API key](https://aistudio.google.com/apikey). Optional: Python 3.10+ (speech-to-text), an NVIDIA GPU (live avatar), [Ollama](https://ollama.com), and any of the agent CLIs above.
 
 ```bash
-git clone https://github.com/samukbg/Jarvis-Live.git
-cd Jarvis-Live
+git clone https://github.com/archivv-nptel/jarvis-world.git
+cd jarvis-world
 
 cp .env.example .env
 # edit .env: set API_KEY (openssl rand -hex 24) and GEMINI_API_KEY
@@ -203,6 +202,11 @@ npm install && npm run dev                  # http://localhost:11433
 
 For production, `npm run build` and serve `dist/` behind any HTTPS reverse proxy that forwards `/api` and `/ws` to the server.
 </details>
+
+### Vendored tools and skills
+
+- [Holo Gestures](vendor/holo-gestures/) includes its standalone viewer, local assets, and Python server. Run `python server.py` from that directory to use the viewer with its sample notes.
+- [Three.js skills](vendor/threejs-skills/skills/) are available directly in the checkout. Point your coding agent at the relevant local `SKILL.md` file.
 
 <details>
 <summary><b>Voice: local speech-to-text and wake word</b></summary>
