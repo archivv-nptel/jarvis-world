@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jarvis World | Self-hosted voice AI assistant</title>
+  <meta name="description" content="Jarvis World is an open-source voice AI assistant you run on your own computer, with real-time conversation, an optional talking avatar, and coding agent integrations.">
+  <link rel="canonical" href="https://archivv-nptel.github.io/jarvis-world/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jarvis World | Self-hosted voice AI assistant">
+  <meta property="og:description" content="Talk to an AI assistant that runs on your own computer and hands work to the coding agents you already use.">
+  <meta property="og:url" content="https://archivv-nptel.github.io/jarvis-world/">
+  <meta property="og:image" content="https://archivv-nptel.github.io/jarvis-world/screenshots/hero.png">
+  <meta property="og:image:alt" content="Jarvis Live command center with the voice orb and agent activity panel">
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: system-ui, sans-serif;
+      color: #e9f3f6;
+      background: #071119;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    a { color: inherit; text-underline-offset: 0.25em; }
+    a:focus-visible { outline: 2px solid #a6f1eb; outline-offset: 5px; }
+
+    .frame {
+      width: min(100% - 2.5rem, 80rem);
+      margin-inline: auto;
+    }
+
+    .masthead {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-block: 1.5rem;
+      border-bottom: 1px solid #263945;
+    }
+
+    .wordmark {
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+      align-items: center;
+      gap: clamp(2rem, 5vw, 5rem);
+      padding-block: clamp(2.75rem, 8vw, 7rem);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.65rem, 6vw, 5.5rem);
+      line-height: 0.99;
+      font-weight: 730;
+      letter-spacing: -0.06em;
+    }
+
+    p {
+      color: #b6cbd5;
+      line-height: 1.65;
+    }
+
+    .intro {
+      max-width: 43ch;
+      margin-block: 1.5rem;
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+    }
+
+    .primary {
+      display: inline-block;
+      padding: 0.8rem 1.2rem;
+      border-radius: 0.4rem;
+      background: #7de8dd;
+      color: #092326;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .primary:hover { background: #a6f1eb; }
+
+    .app-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #304c59;
+      border-radius: 0.75rem;
+      box-shadow: 0 1rem 5rem #32c9d51f;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem 3rem;
+      border-top: 1px solid #263945;
+      padding-block: 2rem 3rem;
+    }
+
+    .features h2 { margin: 0; font-size: 1.125rem; }
+    .features p { margin: 0.5rem 0 0; }
+
+    .footer {
+      border-top: 1px solid #263945;
+      padding-block: 1rem 1.5rem;
+      font-size: 0.9rem;
+      color: #b6cbd5;
+    }
+
+    @media (max-width: 48rem) {
+      .hero, .features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="frame masthead">
+    <span class="wordmark">Jarvis World</span>
+    <a href="https://github.com/archivv-nptel/jarvis-world#-quick-start">Quick start</a>
+  </header>
+  <main class="frame">
+    <section class="hero" aria-labelledby="headline">
+      <div>
+        <h1 id="headline">A voice AI assistant for your computer</h1>
+        <p class="intro">Jarvis World is the open-source home of Jarvis Live. Run it on your computer, talk to it in real time, and hand tasks to the coding agents you already use.</p>
+        <a class="primary" href="https://github.com/archivv-nptel/jarvis-world">View on GitHub</a>
+      </div>
+      <img class="app-image" src="screenshots/hero.png" width="1600" height="1000" alt="Jarvis Live command center with the voice orb, connected agents, and activity panel">
+    </section>
+    <div class="features">
+      <section>
+        <h2>Real-time conversation</h2>
+        <p>Speak with Gemini Live or OpenAI Realtime, with support for interrupting Jarvis as it answers.</p>
+      </section>
+      <section>
+        <h2>Coding agents</h2>
+        <p>Send requests to tools such as Claude Code and Codex, then follow their progress in the dashboard.</p>
+      </section>
+      <section>
+        <h2>Optional live avatar</h2>
+        <p>Use a lip-synced talking avatar in the browser with the AVTR-1 renderer on a supported NVIDIA GPU.</p>
+      </section>
+    </div>
+  </main>
+  <footer class="frame footer">
+    <a href="https://github.com/archivv-nptel/jarvis-world/blob/main/LICENSE">MIT license</a>
+  </footer>
+</body>
+</html>
